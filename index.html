@@ -21,7 +21,7 @@
 <body class="bg-white text-gray-900">
 
 <!-- ================= NAVBAR ================= -->
-<header class="w-full border-b">
+<header class="w-full border-b sticky top-0 z-50 bg-white">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
     
     <!-- Logo -->
@@ -43,8 +43,8 @@
 
     <!-- Icons -->
     <div class="flex items-center gap-4">
-      <button class="text-gray-600 hover:text-black">☰</button>
-      <button class="text-gray-600 hover:text-black">🔍</button>
+      <button class="text-gray-600 hover:text-black" onclick="alert('Menu button clicked!')">☰</button>
+      <button class="text-gray-600 hover:text-black" onclick="alert('Search button clicked!')">🔍</button>
     </div>
   </div>
 </header>
@@ -54,7 +54,7 @@
 
   <!-- Background Image -->
   <img
-    src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa"
+   src="images/hero-1.jpg"
     alt="Accessories"
     class="absolute inset-0 h-full w-full object-cover"
   />
@@ -86,6 +86,7 @@
         <a
           href="#"
           class="inline-flex items-center gap-2 bg-sky-400 text-black px-6 py-3 font-semibold rounded hover:bg-sky-300 transition"
+          onclick="alert('Book A Call clicked!')"
         >
           Book A Call →
         </a>
@@ -93,6 +94,7 @@
         <a
           href="#"
           class="inline-flex items-center gap-2 border border-white px-6 py-3 rounded hover:bg-white hover:text-black transition"
+          onclick="alert('Explore Now clicked!')"
         >
           Explore Now →
         </a>
@@ -148,33 +150,42 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
       <!-- Card 1 -->
-      <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl p-6 shadow-lg">
+      <div class="group bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl p-6 shadow-lg">
         <img
           src="images/button.jpg"
           class="rounded-xl mb-6 h-52 w-full object-cover"
         />
         <span class="text-2xl font-bold text-gray-500">01</span>
-        <h3 class="text-lg font-semibold mt-2">Button Manufacturing</h3>
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold mt-2">Button Manufacturing</h3>
+          <span class="opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-2xl" onclick="alert('Button Manufacturing details!')">→</span>
+        </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-gradient-to-b from-blue-100 to-blue-200 rounded-2xl p-6 shadow-lg">
+      <div class="group bg-gradient-to-b from-blue-100 to-blue-200 rounded-2xl p-6 shadow-lg">
         <img
           src="images/ribbon.jpg"
           class="rounded-xl mb-6 h-52 w-full object-cover"
         />
         <span class="text-2xl font-bold text-gray-500">02</span>
-        <h3 class="text-lg font-semibold mt-2">Ribbon Manufacturing</h3>
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold mt-2">Ribbon Manufacturing</h3>
+          <span class="opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-2xl" onclick="alert('Ribbon Manufacturing details!')">→</span>
+        </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl p-6 shadow-lg">
+      <div class="group bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl p-6 shadow-lg">
         <img
           src="images/bow.jpg"
           class="rounded-xl mb-6 h-52 w-full object-cover"
         />
         <span class="text-2xl font-bold text-gray-500">03</span>
-        <h3 class="text-lg font-semibold mt-2">Bow Manufacturing</h3>
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold mt-2">Bow Manufacturing</h3>
+          <span class="opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer text-2xl" onclick="alert('Bow Manufacturing details!')">→</span>
+        </div>
       </div>
 
     </div>
@@ -247,7 +258,7 @@
   </div>
 
   <!-- Decorative Big Text -->
-  <h1 class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[18rem] font-bold text-black/5 select-none">
+  <h1 class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[20rem] font-bold text-black/5 select-none">
     PORTFOLIO
   </h1>
 </section>
@@ -325,53 +336,100 @@
 </section>
 <!-- ================= WHY CHOOSE US ================= -->
 <section class="py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-    <!-- Heading -->
-    <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
-      04 // OUR FEATURES
+    <!-- Left side content -->
+    <div>
+      <!-- Heading -->
+      <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
+        04 // OUR FEATURES
+      </p>
+
+      <h2 class="text-4xl lg:text-5xl font-bold mb-16">
+        Why choose Us
+      </h2>
+
+      <!-- Feature List -->
+      <div class="max-w-xl space-y-6">
+
+        <!-- Item -->
+        <div class="flex items-center gap-4 border-b pb-4">
+          <span class="text-indigo-500 text-xl">→</span>
+          <span class="text-indigo-500 font-medium">
+            20+ Years Experience
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center gap-4 border-b pb-4">
+          <span class="text-xl">↗</span>
+          <span class="font-medium">
+            Creative Custom Design
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center gap-4 border-b pb-4">
+          <span class="text-xl">↗</span>
+          <span class="font-medium">
+            Globally Awarded
+          </span>
+        </div>
+
+        <!-- Item -->
+        <div class="flex items-center gap-4 border-b pb-4">
+          <span class="text-xl">↗</span>
+          <span class="font-medium">
+            Best Quality With Price
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right side image -->
+<div class="relative w-full h-[520px]">
+
+  <!-- Main image -->
+  <img
+    src="https://www.arquitecturabd.com/wp-content/uploads/2020/08/406.1-1170x550.jpg"
+    alt="Factory"
+    class="w-full h-full object-cover rounded-xl"
+  />
+
+  <!-- Black overlay info card -->
+  <div class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/80 text-white p-8 rounded-xl w-[300px] shadow-xl">
+    
+    <!-- Logo -->
+    <img src="images/f1.jpg" alt="Logo" class="w-32 mb-4">
+
+    <!-- Text -->
+    <p class="text-sm text-gray-300 leading-relaxed mb-4">
+      Maheen Accessories Ltd has been serving for over 20 years, delivering premium-quality accessories worldwide.
     </p>
 
-    <h2 class="text-4xl lg:text-5xl font-bold mb-16">
-      Why choose Us
-    </h2>
+    <!-- Link -->
+    <a href="#" class="text-sm underline hover:text-indigo-400 transition">
+      Read More →
+    </a>
+  </div>
 
-    <!-- Feature List -->
-    <div class="max-w-xl space-y-6">
-
-      <!-- Item -->
-      <div class="flex items-center gap-4 border-b pb-4">
-        <span class="text-indigo-500 text-xl">→</span>
-        <span class="text-indigo-500 font-medium">
-          20+ Years Experience
-        </span>
-      </div>
-
-      <!-- Item -->
-      <div class="flex items-center gap-4 border-b pb-4">
-        <span class="text-xl">↗</span>
-        <span class="font-medium">
-          Creative Custom Design
-        </span>
-      </div>
-
-      <!-- Item -->
-      <div class="flex items-center gap-4 border-b pb-4">
-        <span class="text-xl">↗</span>
-        <span class="font-medium">
-          Globally Awarded
-        </span>
-      </div>
-
-      <!-- Item -->
-      <div class="flex items-center gap-4 border-b pb-4">
-        <span class="text-xl">↗</span>
-        <span class="font-medium">
-          Best Quality With Price
-        </span>
-      </div>
-
+  <!-- Stats cards -->
+  <div class="absolute bottom-6 right-6 flex gap-4">
+    
+    <div class="bg-white p-5 rounded-lg shadow-lg text-center min-w-[120px]">
+      <p class="text-3xl font-bold">500+</p>
+      <p class="text-sm text-gray-600">Designs</p>
     </div>
+
+    <div class="bg-sky-200 p-5 rounded-lg shadow-lg text-center min-w-[140px]">
+      <p class="text-3xl font-bold">3000k</p>
+      <p class="text-sm text-gray-700">Order Covered</p>
+    </div>
+
+  </div>
+</div>
+
   </div>
 </section>
 <!-- ================= OUR SMART POLICIES ================= -->
@@ -482,7 +540,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
       <div>
         <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
-          05 // OUR MANAGEMENT
+          06 // OUR MANAGEMENT
         </p>
         <h2 class="text-4xl lg:text-5xl font-bold">
           Our Core Members <br />
@@ -538,7 +596,7 @@
     <!-- Heading -->
     <div class="text-center mb-20">
       <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
-        06 // OUR PORTFOLIO
+        07 // OUR PORTFOLIO
       </p>
       <h2 class="text-4xl lg:text-5xl font-bold">
         Maheen Creates
@@ -602,7 +660,7 @@
 </section>
 <!-- ================= TESTIMONIAL ================= -->
 <section class="relative py-32 bg-black">
-  <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa"
+  <img src="images/buttons-2.jpg"
        class="absolute inset-0 w-full h-full object-cover opacity-70">
 
   <div class="relative max-w-5xl mx-auto px-6">
@@ -619,7 +677,7 @@
       </p>
 
       <div class="flex items-center gap-4">
-        <img src="https://via.placeholder.com/50" class="rounded-full">
+        <img src="https://img.freepik.com/premium-photo/passport-photo-man-welldressed-caucasian-businessman-suit-tie-smiling-id-portrait_817921-61256.jpg?w=1480" class="rounded-small h-10 w-10 object-cover" />
         <div>
           <p class="font-semibold">Mr. Mahabub Hasan</p>
           <p class="text-sm opacity-70">
@@ -636,7 +694,7 @@
   <div class="max-w-7xl mx-auto px-6">
 
     <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
-      06 // OUR PARTNERS
+      08 // OUR PARTNERS
     </p>
 
     <h2 class="text-4xl lg:text-5xl font-bold mb-16">
@@ -645,9 +703,9 @@
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-      <div class="border p-10">H&amp;M</div>
-      <div class="border p-10">NAKANO</div>
-      <div class="border p-10">M&amp;S</div>
+      <div class="border p-10"><img src="https://cdn.worldvectorlogo.com/logos/h-m.svg" alt="Partner 1" class="mx-auto"></div>
+      <div class="border p-10"><img src="https://maheenaccessories.com/wp-content/uploads/2024/03/nakano2.jpg" alt="Partner 2" class="mx-auto"></div>
+      <div class="border p-10"><img src="https://maheenaccessories.com/wp-content/uploads/2024/04/ms-logo.png" alt="Partner 3" class="mx-auto"></div>
     </div>
 
   </div>
@@ -659,7 +717,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
       <div>
         <p class="text-sm font-semibold tracking-widest text-indigo-500 mb-4">
-          07 // LATEST NEWS
+          09 // LATEST NEWS
         </p>
         <h2 class="text-4xl lg:text-5xl font-bold">
           Our Activity <br>
@@ -769,7 +827,7 @@
 
     <div>
       <h4 class="font-semibold">Call Us</h4>
-      <p class="text-sm text-gray-500">+8801738568882</p>
+      <p class="text-sm text-gray-500">+8801738xxxxxx</p>
     </div>
 
     <div>
